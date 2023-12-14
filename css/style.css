@@ -146,12 +146,13 @@ h6,
     body{
         overflow-x: hidden;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         width: 100%;
         background: #FFFFFF;
         z-index: 999;
+        overflow-x: hidden;
     }
 
     .navbar-light .navbar-collapse {
@@ -187,6 +188,7 @@ h6,
         left: 0;
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
+        overflow-x: hidden;
     }
     
     .sticky-top.navbar-light {
