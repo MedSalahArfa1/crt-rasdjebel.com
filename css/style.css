@@ -143,6 +143,10 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+    body{
+        overflow-x: hidden;
+    }
+    
     .sticky-top.navbar-light {
         position: fixed;
         width: 100%;
@@ -172,6 +176,10 @@ h6,
 }
 
 @media (min-width: 992px) {
+    body{
+        overflow-x: hidden;
+    }
+
     .navbar-light {
         position: absolute;
         width: 100%;
@@ -218,6 +226,11 @@ h6,
     }
 }
 
+@media (max-width: 767px) {
+    body {
+      overflow-x: hidden;
+    }
+}
 
 /*** Hero Header ***/
 .hero-header {
