@@ -114,6 +114,7 @@ h6,
     color: var(--dark) !important;
     outline: none;
     transition: .5s;
+    overflow-x: hidden;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link{
@@ -142,9 +143,6 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    body{
-        overflow-x: hidden;
-    }
 
     .sticky-top.navbar-light {
         position: fixed;
@@ -176,10 +174,7 @@ h6,
 }
 
 @media (min-width: 992px) {
-    body{
-        overflow-x: hidden;
-    }
-
+    
     .navbar-light {
         position: absolute;
         width: 100%;
@@ -227,11 +222,6 @@ h6,
     }
 }
 
-@media (max-width: 767px) {
-    .navbar-light {
-        overflow-x: hidden;
-    }
-}
 
 /*** Hero Header ***/
 .hero-header {
