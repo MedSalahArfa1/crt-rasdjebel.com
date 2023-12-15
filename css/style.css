@@ -5,9 +5,6 @@
     --dark: #04000B;
 }
 
-body{
-    overflow-x: hidden;
-}
 
 /*** Spinner ***/
 #spinner {
