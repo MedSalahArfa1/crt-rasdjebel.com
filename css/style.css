@@ -1,7 +1,6 @@
 /********** Template CSS **********/
 :root {
     --primary: #DB374D;
-    --secondary: #FBA504;
     --light: #F6F4F9;
     --dark: #04000B;
 }
@@ -22,20 +21,7 @@
 }
 
 
-/* Customize the scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-::-webkit-scrollbar-track {
-    background: var(--light);
-}
-::-webkit-scrollbar-thumb {
-    background-color: var(--primary);
-    border-radius: 1px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--dark);
-}
+
 
 
 /*** Heading ***/
