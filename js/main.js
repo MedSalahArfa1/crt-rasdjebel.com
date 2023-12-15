@@ -35,30 +35,44 @@
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 620,
-        dots: false,
-        loop: true,
-        nav : true,
-        stagePadding: 80,
-        startPosition:'-1',
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            576: {
-                items: 2
-            },
-            992:{
-                items:3
-            }
+    autoplay: true,
+    smartSpeed: 1000,
+    margin: 20, // Adjust margin for spacing between items
+    dots: false,
+    loop: true,
+    nav: true,
+    stagePadding: 0, // Remove stage padding
+    startPosition: '-1',
+    navText: [
+        '<i class="bi bi-chevron-left"></i>',
+        '<i class="bi bi-chevron-right"></i>'
+    ],
+    responsive: {
+        0: {
+            items: 1,
+            margin: 10 // Adjust margin for smaller screens
+        },
+        576: {
+            items: 2,
+            margin: 20 // Adjust margin for medium screens
+        },
+        992: {
+            items: 3,
+            margin: 620,
+            stagePadding: 80,
         }
-    });
+    },
+    onInitialized: function (event) {
+        let $element = $(event.target);
+        let $items = $element.find('.owl-item');
+        let centerIndex = Math.floor($items.length / 2);
+
+        // Center the second item horizontally
+        $element.trigger('to.owl.carousel', centerIndex);
+    }
+});
+
+    
     
 })(jQuery);
 
