@@ -228,8 +228,8 @@ h6,
 }
 
 @media (max-width: 767px) {
-    body {
-      overflow-x: hidden;
+    .navbar-light {
+        overflow-x: hidden;
     }
 }
 
