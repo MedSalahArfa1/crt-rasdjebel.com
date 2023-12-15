@@ -5,6 +5,9 @@
     --dark: #04000B;
 }
 
+body{
+    overflow-x: hidden;
+}
 
 /*** Spinner ***/
 #spinner {
@@ -21,7 +24,20 @@
 }
 
 
-
+/*** Customizable scrollbar ***/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark);
+}
 
 
 /*** Heading ***/
