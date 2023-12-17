@@ -5,6 +5,10 @@
     --dark: #04000B;
 }
 
+/*** overflow ***/
+body {
+    overflow-x: hidden;
+}
 
 /*** Spinner ***/
 #spinner {
@@ -20,22 +24,23 @@
     opacity: 1;
 }
 
-
-/*** Customizable scrollbar ***/
+/*** Customizable scrollbar
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
+
 ::-webkit-scrollbar-track {
     background: var(--light);
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     border-radius: 1px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--dark);
-}
-
+} ***/
 
 /*** Heading ***/
 h1,
@@ -55,7 +60,6 @@ h6,
 .fw-medium {
     font-weight: 500 !important;
 }
-
 
 /*** Button ***/
 .btn {
@@ -93,7 +97,6 @@ h6,
     border-radius: 50px;
 }
 
-
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
@@ -117,7 +120,7 @@ h6,
     overflow-x: hidden;
 }
 
-.sticky-top.navbar-light .navbar-nav .nav-link{
+.sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
     color: var(--dark) !important;
 }
@@ -174,7 +177,7 @@ h6,
 }
 
 @media (min-width: 992px) {
-    
+
     .navbar-light {
         position: absolute;
         width: 100%;
@@ -184,10 +187,11 @@ h6,
         z-index: 999;
         overflow-x: hidden;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: #FFFFFF;
+        overflow-x: hidden;
     }
 
     .sticky-top.navbar-light .navbar-brand h1 {
@@ -222,7 +226,6 @@ h6,
     }
 }
 
-
 /*** Hero Header ***/
 .hero-header {
     padding: 12rem 0;
@@ -238,7 +241,6 @@ h6,
         padding: 6rem 0 9rem 0;
     }
 }
-
 
 /*** Section Title ***/
 .section-title {
@@ -299,7 +301,6 @@ h6,
     background: #FFFFFF;
 }
 
-
 /*** Feature ***/
 .feature-item {
     transition: .5s;
@@ -308,7 +309,6 @@ h6,
 .feature-item:hover {
     margin-top: -15px;
 }
-
 
 /*** About ***/
 .progress {
@@ -320,7 +320,6 @@ h6,
     transition: 3s;
 }
 
-
 /*** Fact ***/
 .fact {
     margin: 6rem 0;
@@ -330,7 +329,6 @@ h6,
     background-position: center center;
     background-repeat: no-repeat;
 }
-
 
 /*** Service ***/
 .service-item {
@@ -435,15 +433,15 @@ h6,
 
 /*** Team ***/
 .team-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .team-item .text-center {
-    width: 100%; /* Ensure the .text-center div takes up the full width of the .team-item div */
+    width: 100%;
 }
 
 .team-item .btn {
@@ -456,13 +454,12 @@ h6,
     background: var(--primary);
 }
 
-.team-item img{
+.team-item img {
     max-width: 4rem;
     max-height: 4rem;
     display: center;
     margin: 0 auto;
 }
-
 
 /*** Footer ***/
 .footer {
@@ -549,4 +546,3 @@ h6,
     border-color: var(--primary);
     box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
 }
-
