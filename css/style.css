@@ -24,7 +24,7 @@ body {
     opacity: 1;
 }
 
-/*** Customizable scrollbar
+/*** Customizable scrollbar ***/
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -40,7 +40,7 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--dark);
-} ***/
+}
 
 /*** Heading ***/
 h1,
@@ -146,6 +146,10 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+    
+    body{
+        overflow-x: hidden;
+    }
 
     .sticky-top.navbar-light {
         position: fixed;
@@ -179,7 +183,7 @@ h6,
 }
 
 @media (min-width: 992px) {
-
+    
     .navbar-light {
         position: absolute;
         width: 100%;
