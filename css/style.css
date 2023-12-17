@@ -158,12 +158,14 @@ h6,
     .navbar-light .navbar-collapse {
         margin-top: 15px;
         border-top: 1px solid #DDDDDD;
+        overflow-x: hidden;
     }
 
     .navbar-light .navbar-nav .nav-link,
     .sticky-top.navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
         margin-left: 0;
+        overflow-x: hidden;
         color: var(--dark) !important;
     }
 
