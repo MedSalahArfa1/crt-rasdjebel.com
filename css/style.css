@@ -146,20 +146,21 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    
+
     body{
         overflow-x: hidden;
     }
 
     .sticky-top.navbar-light {
         position: fixed;
-        width: 100%;
+        max-width: 100%;
         background: #FFFFFF;
         z-index: 999;
         overflow-x: hidden;
     }
 
     .navbar-light .navbar-collapse {
+        max-width: 100%;
         margin-top: 15px;
         border-top: 1px solid #DDDDDD;
         overflow-x: hidden;
