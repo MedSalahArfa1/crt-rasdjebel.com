@@ -153,14 +153,14 @@ h6,
 
     .sticky-top.navbar-light {
         position: fixed;
-        max-width: 100%;
+        width: fit-content;
         background: #FFFFFF;
         z-index: 999;
         overflow-x: hidden;
     }
 
     .navbar-light .navbar-collapse {
-        max-width: 100%;
+        width: fit-content;
         margin-top: 15px;
         border-top: 1px solid #DDDDDD;
         overflow-x: hidden;
