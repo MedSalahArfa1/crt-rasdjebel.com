@@ -37,11 +37,11 @@
     $(".testimonial-carousel").owlCarousel({
     autoplay: true,
     smartSpeed: 1000,
-    margin: 20, // Adjust margin for spacing between items
+    margin: 20, 
     dots: false,
     loop: true,
     nav: true,
-    stagePadding: 0, // Remove stage padding
+    stagePadding: 0, 
     startPosition: '-1',
     navText: [
         '<i class="bi bi-chevron-left"></i>',
@@ -50,11 +50,11 @@
     responsive: {
         0: {
             items: 1,
-            margin: 10 // Adjust margin for smaller screens
+            margin: 10 
         },
         576: {
             items: 2,
-            margin: 20 // Adjust margin for medium screens
+            margin: 20 
         },
         992: {
             items: 3,
@@ -101,4 +101,35 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function () {
+    let lastScrollTop = 0;
+    let navbar = $('.navbar-light');
+
+    $(window).scroll(function () {
+        let st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // Scroll down
+            navbar.addClass('navbar-hidden').removeClass('navbar-visible');
+        } else {
+            // Scroll up
+            navbar.removeClass('navbar-hidden').addClass('navbar-visible');
+        }
+        lastScrollTop = st;
+    });
+});
+
+$(document).ready(function () {
+    let scrollingTimer;
+    let navbar = $('.navbar-light');
+
+    $(window).scroll(function () {
+        clearTimeout(scrollingTimer);
+        navbar.addClass('navbar-hidden');
+
+        scrollingTimer = setTimeout(function () {
+            // Scrolling has stopped
+            navbar.removeClass('navbar-hidden');
+        }, 100);
+    });
+});
 

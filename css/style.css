@@ -181,6 +181,19 @@ h6,
     .navbar-light .navbar-brand img {
         max-height: 45px;
     }
+
+    .navbar-light {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .navbar-light.navbar-hidden {
+        transform: translateY(-100%);
+    }
+
+    .navbar-light.navbar-visible {
+        transform: translateY(0);
+    }
+
 }
 
 @media (min-width: 992px) {
