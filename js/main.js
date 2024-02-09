@@ -135,6 +135,8 @@ $(document).ready(function () {
         scrollingTimer = setTimeout(function () {
             // Scrolling has stopped
             navbar.removeClass('navbar-hidden');
+            // Remove 'active' class from navbar toggler
+            navbarToggler.removeClass('active');
         }, 100);
     });
 });
