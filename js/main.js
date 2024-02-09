@@ -121,15 +121,18 @@ $(document).ready(function () {
 $(document).ready(function () {
     let scrollingTimer;
     let navbar = $('.navbar-light');
+    let navbarToggler = $(".navbar-toggler");
+    let navbarLinks = $(".navbar-collapse").find(".nav-link");
 
-    $(window).scroll(function () {
+    // Function to handle scrolling
+    function handleScrolling() {
         clearTimeout(scrollingTimer);
         navbar.addClass('navbar-hidden');
 
         // Check if the navbar is open on mobile
         if ($(".navbar-collapse").hasClass("show")) {
             // Close the navbar
-            $(".navbar-toggler").click();
+            navbarToggler.click();
         }
 
         scrollingTimer = setTimeout(function () {
@@ -138,7 +141,23 @@ $(document).ready(function () {
             // Remove 'active' class from navbar toggler
             navbarToggler.removeClass('active');
         }, 100);
+    }
+
+    // Scroll event listener
+    $(window).scroll(handleScrolling);
+
+    // Handle active state of menu links
+    navbarLinks.on('click', function() {
+        navbarLinks.removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // Close menu on link click
+    navbarLinks.on('click', function() {
+        navbarToggler.click();
     });
 });
+
+
 
 
