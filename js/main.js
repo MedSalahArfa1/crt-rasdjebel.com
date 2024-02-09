@@ -126,10 +126,17 @@ $(document).ready(function () {
         clearTimeout(scrollingTimer);
         navbar.addClass('navbar-hidden');
 
+        // Check if the navbar is open on mobile
+        if ($(".navbar-collapse").hasClass("show")) {
+            // Close the navbar
+            $(".navbar-toggler").click();
+        }
+
         scrollingTimer = setTimeout(function () {
             // Scrolling has stopped
             navbar.removeClass('navbar-hidden');
         }, 100);
     });
 });
+
 
