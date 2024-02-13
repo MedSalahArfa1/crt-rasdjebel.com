@@ -159,5 +159,39 @@ $(document).ready(function () {
 });
 
 
+let map = L.map('map').setView([37.21, 10.12], 15);
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
+
+let drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+let MarkerIcon = L.icon({
+    iconUrl: 'img/icon.ico',
+
+    iconSize:     [25, 25], // size of the icon
+});
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById("location").value = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    let marker;
+    let location = [position.coords.latitude, position.coords.longitude];
+    document.getElementById("location").value = location;
+
+    if (marker) {
+        map.removeLayer(marker);
+    }
+
+    marker = L.marker(location,{icon: MarkerIcon}).addTo(map);
+    map.setView(location, 15);
+}
+
+
 
 
