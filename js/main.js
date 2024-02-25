@@ -159,6 +159,36 @@ $(document).ready(function () {
 });
 
 
+//Login
+// Check if the user is already logged in when the page loads
+window.onload = function() {
+    if (localStorage.getItem("loggedIn") === "true") {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }
+};
+
+// Login function
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    
+    // Check if the entered username and password are correct
+    if (username === "responsable" && password === "responsable1234") {
+        // Store the login status in local storage
+        localStorage.setItem("loggedIn", "true");
+        
+        // Hide the login form and show the content
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else {
+        alert("Nom d'utilisateur ou mot de passe invalide. Veuillez réessayer.");
+    }
+}
+
+
+
+//Map
 let map = L.map('map').setView([37.21, 10.12], 15);
 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 
