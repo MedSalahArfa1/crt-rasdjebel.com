@@ -167,9 +167,10 @@ map.addLayer(drawnItems);
 
 let MarkerIcon = L.icon({
     iconUrl: 'img/icon.ico',
-
-    iconSize:     [25, 25], // size of the icon
+    iconSize: [25, 25],
 });
+
+let marker;
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -180,7 +181,6 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    let marker;
     let location = [position.coords.latitude, position.coords.longitude];
     document.getElementById("location").value = location;
 
@@ -188,9 +188,10 @@ function showPosition(position) {
         map.removeLayer(marker);
     }
 
-    marker = L.marker(location,{icon: MarkerIcon}).addTo(map);
+    marker = L.marker(location, { icon: MarkerIcon }).addTo(map);
     map.setView(location, 15);
 }
+
 
 
 
