@@ -195,6 +195,19 @@
                     </form>
                 </div>
             </div>
+            <!-- Footer Start -->
+            <div class="container-fluid bg-danger text-light footer" id="contact">
+                <div class="container px-lg-5">
+                    
+                        <div class="row">
+                            <div class="col-md-12 text-center text-md-center mb-3 mb-md-0">
+                                Page réservée uniquement aux responsables de l'évaluation du CRT Ras Djebel
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <!-- Footer End -->
         </div>
 
         <!-- JavaScript Libraries -->
@@ -210,22 +223,6 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-
-        <!-- Login Javascript -->
-        <script>
-            function login() {
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
-                
-                // Check if the entered username and password are correct
-                if (username === "responsable" && password === "responsable1234") {
-                    document.getElementById("login-form").style.display = "none";
-                    document.getElementById("content").style.display = "block";
-                } else {
-                    alert("Nom d'utilisateur ou mot de passe invalide. Veuillez réessayer.");
-                }
-            }
-        </script>
 
     </body>
 </html>

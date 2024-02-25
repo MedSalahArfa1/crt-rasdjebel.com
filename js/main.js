@@ -185,8 +185,12 @@ function login() {
         alert("Nom d'utilisateur ou mot de passe invalide. Veuillez réessayer.");
     }
 }
-
-
+// Execute login function when Enter key is pressed
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        login();
+    }
+});
 
 //Map
 let map = L.map('map').setView([37.21, 10.12], 15);
