@@ -574,3 +574,10 @@ h6,
     border-radius: 10px;
     z-index: 998;
 }
+
+@media (max-width: 767px) {
+    .sponsor {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
